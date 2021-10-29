@@ -1,21 +1,345 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./scss/main.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&family=Roboto&display=swap" rel="stylesheet">
+    <title>R Leader</title>
+    <meta name="description" content="100 способів звалити з раші">
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <header class="header-hero">
+<div class="container">
+  <div class="header">
+    <div class="header-addres-cosult">
+      <address class="header__address">
+        <p>г. Болото, ул. Парковая 34 б</p>
+        <p>+7(100) 123 45 67</p>
+        <p>+7(100) 123 45 67</p>
+        
+      </address>
+      <div class="consultation">Заказать консультацию</div>
+    </div>
+    
+      <img class="logo" src="./images/svg/logo.svg" alt="logo">
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
+      <button 
+      type="button" 
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="menu"
+      data-burger="burger"
+      
+      >
+      
+            <svg width="40" height="40" aria-label="mobile menu button">
+                <use class="icon-menu" xlink:href="./images/svg/symbol-defs.svg#burger" href="./images/svg/symbol-defs.svg#burger"></use>
+                <use class="icon-cross" href="./images/svg/symbol-defs.svg#cross"></use>
+
+            </svg>
+
+      </button>
+  </div>
+  <div class="hero__container">
+    <div class="hero">
+      <h1 class="hero__title">Компания, которой доверяют</h1>
+      <p class="hero__paragraph">Получите гражданство ЕС 
+          в ускоренный срок при поддержке юристов Rlider.</p>
+  </div>
+  <div id="header-menu" class="contact-us__backdrop hero-backdrop__contact-us">
+    <nav class="nav-menu">
+      
+      <ul class="nav-menu__list">
+        <li class="nav__item current">
+          <a href="javascript:void(0);" class="nav__link">Главная</a></li>
+      <li class="nav__item">
+        <select id="select" name="select" class="select">
+          <option value="q"><a href="javascript:void(0);" class="nav__link">Блог</a></option>
+          <option value="s"><a href="javascript:void(0);" class="nav__link">Блог</a></option>
+          <option value="q" selected>Услуги</option>
+          <option value="q"><a href="javascript:void(0);" class="nav__link">Блог</a></option>
+      </select>
+    </li>
+      <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Блог</a></li>
+      <li class="nav__item"><a href="javascript:void(0);" class="nav__link">О нас</a></li>
+      <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Отзывы</a></li>
+      <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Контакты</a></li></ul>
+    </nav>
+    <div class="contact-us hero__contact-us ">
+
+      <button  data-contact="open" class="contact-us__text">Свяжитесь с нами</button>
+      <form class="contact-us__form">
+        <input placeholder="Ваше имя" type="text" name="name">
+        <input placeholder="Ваш email" type="email" name="mail">
+        <input placeholder="Ваш телефон " type="tel" name="tel">
+        <button type="submit">связаться с нами</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+    </header>
+
+
+  <main>
+    <section class="about-us">
+      <div class="container about-us__container">
+        <div class="about-us__image-block">
+          <picture>
+            <source
+            srcset="./images/about-us/about-img-desktop.jpg 1x, 
+            ./images/about-us/about-img@x2.jpg 2x"
+            media="(min-width: 1200px)"
+            />
+  
+            <img class="about-us__image"
+            srcset="./images/about-us/about-img-mobile@x2.jpg 2x"
+            src="./images/about-us/about-img-mobile.jpg" 
+            alt="office photo">
+            
+        </picture>
+        </div>
+        <div class="about-us__info">
+          <h2 class="about-us__title">Несколько слов 
+            о  компании</h2>
+            <p class="about-us__paragraph">Компания Rlider предоставляет помощь в оформлении гражданства ЕС на основании действующего миграционного законодательства европейских стран. С получением паспорта Евросоюза Вам становятся доступны все преимущества статуса гражданина ЕС – безвизовые путешествия по миру, официальное трудоустройство, получение образования в престижных университетах Европы по уменьшенной стоимости или полностью бесплатно, качественное медицинское обслуживание.
+            </p>
+    <ul class="about-us__superiority-list">
+      <li><span class="about-us__superiority-number">250+</span><span class="about-us__superiority-text">Сотрудников</span></li>
+      <li><span class="about-us__superiority-number">12+</span><span class="about-us__superiority-text">Офисов</span></li>
+        <li><span class="about-us__superiority-number">250+</span><span class="about-us__superiority-text">Клиентов</span></li>
+    </ul>
+        </div>
+      </div>
+  </section>
+    <section class="benefits">
+<div class="benefits__container container">
+  <h2 class="benefits__title">Преимущества работы с компанией Rlider</h2>
+  <ul class="benefits__list">
+      <li class="benefits__item">
+              <image class="benefits__image" src="./images/svg/Group.svg"  alt="for seo"></image>
+
+          <h3 class="benefits__item-title">Комплексное сопровождение</h3>
+          <div class="benefits__line-item"></div>
+          <p  class="benefits__item-paragraph">С момента первой консультации и до получения паспорта гражданина Евросоюза мы предоставляем нашим клиентам грамотную юридическую поддержку.</p>
+      </li>
+      <li class="benefits__item">
+        <image class="benefits__image" src="./images/svg/individual.svg"  alt="for seo"></image>
+          <h3 class="benefits__item-title">Индивидуальный подбор плана иммиграции</h3>
+          <div class="benefits__line-item"></div>
+          <p  class="benefits__item-paragraph">Специалисты компании подберут для Вас наиболее выгодную государственную программу для получения второго паспорта ЕС.</p>
+      </li>
+      <li class="benefits__item">
+        <image class="benefits__image" src="./images/svg/confidential.svg" alt="for seo"></image>
+          <h3 class="benefits__item-title">Соблюдение политики конфиденциальности</h3>
+          <div class="benefits__line-item"></div>
+          <p  class="benefits__item-paragraph">Компания строго придерживается принципов неразглашения персональной информации клиентов, оформляющих гражданство Евросоюза.</p>
+      </li>
+  </ul>
+</div>
+  </section>
+  <section class="our-programs">
+    <div class="our-programs__container container">
+      <div class="our-programs__info-block">
+        <h3 class="our-programs__title">Действующие иммиграционные программы</h3>
+        <ul class="our-programs__list">
+          <li class="our-programs__list-item">
+            <div class="our-programs__program-info">
+              <span class="our-programs__program-info_time">от 6 месяцев</span>
+              <h4 class="our-programs__program-info_title">Румыния</h4>
+              <p class="our-programs__program-info_paragraph"><span class="our-programs__program-info_price">от 2850 евро</span><span class="our-programs__program-info_separator"> | </span><span class="our-programs__program-info_countri-count"> 171 стран безвиз</span></p>
+            </div>
+            <div>
+              <button class="our-programs__program-info_button">заказать</button>
+            </div>
+          </li>
+          <li class="our-programs__list-item">
+            <div class="our-programs__program-info">
+              <span class="our-programs__program-info_time">от 15 месяцев</span>
+              <h4 class="our-programs__program-info_title">Болгария</h4>
+              <p class="our-programs__program-info_paragraph"><span class="our-programs__program-info_price">от 2850 евро</span><span class="our-programs__program-info_separator"> | </span><span class="our-programs__program-info_countri-count">70 стран безвиз</span></p>
+            </div>
+            <div><button class="our-programs__program-info_button">заказать</button></div>
+          </li>
+          <li class="our-programs__list-item">
+            <div class="our-programs__program-info">
+              <span class="our-programs__program-info_time">от 3 месяцев</span>
+              <h4 class="our-programs__program-info_title">Польша</h4>
+              <p class="our-programs__program-info_paragraph"><span class="our-programs__program-info_price">от 2850 евро</span><span class="our-programs__program-info_separator"> | </span><span class="our-programs__program-info_countri-count"> 174 стран безвиз</span></p>
+            </div>
+            <div><button class="our-programs__program-info_button">заказать</button></div>
+          </li>
+        </ul>
+      </div>
+      <div class="our-programs__image-block">
+        <picture>
+          <source
+          srcset="./images/our-program/family.jpg 1x, 
+          ./images/our-program/family@x2.jpg 2x"
+          media="(min-width: 1200px)"
+          />
+
+          <img class="our-programs__image"
+          srcset="./images/our-program/family-mobile@x2.jpg 2x"
+          src="./images/our-program/family-mobile.jpg" 
+          alt="hapy family">
+          
+      </picture>
+      </div>
+    </div>
+  </section>
+  <section class="our-team">
+    <div class="our-team__container container">
+      <h3 class="our-team__title">Наши эксперты</h3>
+      <ul class="our-team__list">
+        <li class="our-team__list-item">
+          <div class="our-team__photo-block">
+            <image class="our-team__image" src="./images/team/martynov.jpg"></image>
+          </div>
+          <div class="our-team__info-block">
+            <h4 class="our-team__name">Мартынов Иван</h4>
+            <p class="our-team__about-work">Специалист по граждансву Болгарии</p>
+            <button class="our-team__button">связаться</button>
+          </div>
+        </li>
+        <li class="our-team__list-item">
+          <div class="our-team__photo-block">
+            <image class="our-team__image" src="./images/team/romanova.png"></image>
+          </div>
+          <div class="our-team__info-block">
+            <h4 class="our-team__name">Романова Екатерина</h4>
+            <p class="our-team__about-work">Специалист по граждансву Румынии</p>
+            <button class="our-team__button">связаться</button>
+          </div>
+        </li>
+        <li class="our-team__list-item">
+          <div class="our-team__photo-block">
+            <image class="our-team__image" src="./images/team/sokolov.png"></image>
+          </div>
+          <div class="our-team__info-block">
+            <h4 class="our-team__name">Соколов Игорь</h4>
+            <p class="our-team__about-work">Специалист по граждансву ЕС</p>
+            <button class="our-team__button">связаться</button>
+          </div>
+        </li>
+        <li class="our-team__list-item">
+          <div class="our-team__photo-block">
+            <image class="our-team__image" src="./images/team/petrova.jpg"></image>
+          </div>
+          <div class="our-team__info-block">
+            <h4 class="our-team__name">Петрова Ольга</h4>
+            <p class="our-team__about-work">Юрист</p>
+            <button class="our-team__button">связаться</button> 
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="new-passport">
+    <div class="backdrop-width__container container">
+      <div class="new-passport__container ">
+        <div class="new-passport__title-block">
+          <h2 class="new-passport__title">Начните процесс оформления паспорта ЕС прямо сейчас!</h2>
+        </div>
+        <div id="js-new-passport__contact-us" class="contact-us new-passport__contact-us">
+
+          <button  data-contact="passport__open" class="contact-us__text">Свяжитесь с нами</button>
+          <form class="contact-us__form">
+
+            <input placeholder="Ваше имя" type="text" name="name">
+            <input placeholder="Ваш email" type="email" name="mail">
+            <input placeholder="Ваш телефон " type="tel" name="tel">
+            <button type="submit">связаться с нами</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="news-events">
+    <div class="news-events__container container">
+      <h2 class="news-events__title">Последние новости и события</h2>
+        <ul class="news-events__list">
+          <li class="news-events__item">
+            <div class="news-events__photo-block">
+              <image class="news-events__image" src="./images/news-event/hangar-pass.png" alt="build"></image>
+            </div>
+            <div class="news-events__info">
+              <span class="news-events__data">27 октября 2019</span>
+              <h3 class="news-events__card-title">Что даёт румынский паспорт гражданам России</h3>
+              <p class="news-events__paragraph">Многих жителей России интересует возможность получения европейского паспорта...</p>
+            </div>
+          </li>
+          <li class="news-events__item">
+            <div class="news-events__photo-block">
+              <image class="news-events__image" src="./images/news-event/bulgar-pass.png" alt="sea"></image>
+            </div>
+            <div class="news-events__info">
+              <span class="news-events__data">27 октября 2019</span>
+              <h3 class="news-events__card-title">10 преимуществ гражданства Болгарии</h3>
+              <p class="news-events__paragraph">Республика Болгария с 1 января 2007 года является полноправным членом Европейского союза...</p>
+            </div>
+          </li>
+          <li class="news-events__item">
+            <div class="news-events__photo-block">
+              <image class="news-events__image" src="./images/news-event/interest-news.png" alt="girl and noteboock"></image>  
+            </div>
+            <div class="news-events__info">
+              <span class="news-events__data">27 октября 2019</span>
+              <h3 class="news-events__card-title">Название последней очень интересной новости</h3>
+              <p class="news-events__paragraph">Наша новость такая интересная, обязательно почитайте ее и зайдите на наш блог...</p>
+            </div>
+          </li>
+        </ul>
+
+    </div>
+  </section>
+    
+  </main>   
+  
+  <footer class="footer">
+    <div class="footer__container container">
+
+      <address class="footer__info-block">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <span class="footer__contact">
+              <svg class="address-header__icon" width="16px" height="12px">
+                <use href="./images/svg/symbol-defs.svg#phone"></use>
+            </svg>
+            Телефоны</span>
+            <a href="tel:+7(1234)123-456" class="footer__contact-link">+7(1234)123-456</a>
+            <a href="tel:+7(1234)123-456" class="footer__contact-link">+7(1234)123-456</a></li>
+          <li class="footer__item">
+            <span class="footer__contact">
+              <svg class="address-header__icon" width="16px" height="12px">
+                <use href="./images/svg/symbol-defs.svg#address"></use>
+            </svg>
+              Адрес</span>
+              <a href="" class="footer__contact-link">62000 г.Болото, 
+            ул. Победы, 46, офис 45</a></li>
+          <li class="footer__item">
+            <span class="footer__contact">
+              <svg class="address-header__icon" width="16px" height="12px">
+                <use href="./images/svg/symbol-defs.svg#mail"></use>
+            </svg>
+              Электронная</span>
+              <a href="mailto:rlider@gmail.com" class="footer__contact-link">rlider@gmail.com</a></li>
+        </ul>
+      </address>
+      <div class="footer__logo-block">
+        <img src="./images//svg/logo.svg" alt="logo" class="footer__logo">
+        <p class="footer__copyright">&copy; 2020. Rlider Политика конфиденциальности</p>
+      </div>
+    </div>
+
+  </footer>
+  <script src="index.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

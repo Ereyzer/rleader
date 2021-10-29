@@ -1,0 +1,110 @@
+.news-events {
+  margin-bottom: 50px;
+  @media screen and (min-width: $desktop-min-width) {
+    margin-bottom: 100px;
+  }
+  position: relative;
+  &__container {
+    padding-top: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 30px;
+      height: 3px;
+      background: $about-us-accent-color;
+    }
+  }
+  &__title {
+    font-family: $playfair;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: $title-text-color;
+
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    @media screen and (min-width: $desktop-min-width) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 30px;
+    @media screen and (min-width: $desktop-min-width) {
+      margin-top: 0px;
+      margin-left: 30px;
+    }
+  }
+  &__photo-block {
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-min-width) {
+      width: 370px;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__info {
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-bottom: 10px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 4px;
+      height: 78px;
+      background: $about-us-accent-color;
+
+      background-color: $about-us-accent-color;
+    }
+  }
+  &__data {
+    margin-bottom: 10px;
+
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $blue-text-color;
+  }
+  &__card-title {
+    margin-bottom: 15px;
+
+    font-family: $playfair;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: $benefits-text;
+  }
+  &__paragraph {
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    /* or 162% */
+
+    color: $benefits-text;
+  }
+}

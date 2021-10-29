@@ -1,0 +1,88 @@
+.benefits {
+  margin-bottom: 50px;
+  @media screen and (min-width: $desktop-min-width) {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    padding-top: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 30px;
+      height: 3px;
+      background: $about-us-accent-color;
+    }
+  }
+  &__title {
+    font-family: $playfair;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: $title-text-color;
+
+    margin-bottom: 50px;
+  }
+  &__list {
+    @media screen and (min-width: $desktop-min-width) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: 55px 30px;
+
+    background: $secondary-bg-color;
+  }
+  &__item + &__item {
+    margin-top: 30px;
+    @media screen and (min-width: $desktop-min-width) {
+      margin-top: 0px;
+      margin-left: 30px;
+    }
+  }
+
+  &__item-title {
+    font-family: $playfair;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    max-width: 230px;
+    margin-bottom: 20px;
+    color: $benefits-text;
+  }
+  &__line-item {
+    width: 30px;
+    height: 3px;
+
+    margin-bottom: 20px;
+
+    background: $title-text-color;
+  }
+  &__item-paragraph {
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    /* or 162% */
+
+    color: $benefits-text;
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 35px;
+  }
+}

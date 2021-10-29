@@ -1,0 +1,125 @@
+.new-passport {
+  width: 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: $mobile-max-width) {
+    // height: 100vh;
+  }
+
+  background-image: linear-gradient(
+      to right,
+      rgba(43, 43, 43, 0.4),
+      rgba(43, 43, 43, 0.4)
+    ),
+    url("../images/create-passport/creators-team-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-width: $desktop-min-width) {
+    margin-bottom: 100px;
+    background-image: linear-gradient(
+        to right,
+        rgba(43, 43, 43, 0.4),
+        rgba(43, 43, 43, 0.4)
+      ),
+      url("../images/create-passport/creators-team.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(43, 43, 43, 0.4),
+        rgba(58, 70, 97, 0.7)
+      ),
+      url("../images//create-passport/creators-team@x2.jpg");
+  }
+  &__title-block {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images//svg/Vector.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 133px;
+      height: 40px;
+      left: 30%;
+      top: 100%;
+
+      @media screen and (min-width: $desktop-min-width) {
+        // Desktop
+        left: 65%;
+        top: 110%;
+        width: 163px;
+        height: 50px;
+      }
+    }
+    @media screen and (min-width: $desktop-min-width) {
+      // Desktop
+      width: 570px;
+    }
+  }
+  &__title {
+    max-width: 60px;
+    font-family: $playfair;
+    font-weight: 900;
+    color: $primary-text-color;
+    font-style: normal;
+
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 200px;
+    @media screen and (min-width: $desktop-min-width) {
+      margin-bottom: 20px;
+
+      font-size: 48px;
+      line-height: 64px;
+
+      max-width: 574px;
+    }
+  }
+
+  &__container {
+    padding-top: 105px;
+
+    padding-bottom: 130px;
+
+    position: relative;
+    @media screen and (min-width: $desktop-min-width) {
+      padding-top: 110px;
+
+      padding-bottom: 210px;
+
+      position: relative;
+    }
+  }
+
+  &__contact-us {
+    transform: rotate(-90deg);
+
+    box-shadow: 0px 1073px 0 1000px rgba(58, 70, 97, 0.7);
+
+    top: -30px;
+    left: 323px;
+    @media screen and (min-width: $desktop-min-width) {
+      top: 30px;
+      left: 715px;
+    }
+
+    .contact-us__text {
+      box-shadow: 100px 5070px 0 5000px rgba(58, 70, 97, 0.7);
+    }
+  }
+}
+
+.passport__open-menu {
+  left: -2px;
+  .contact-us__text {
+    box-shadow: 100px 5070px 0 5000px rgba(58, 70, 97, 0.9);
+  }
+  .new-passport {
+    &__contact-us {
+      box-shadow: 0px 1073px 0 1000px rgba(58, 70, 97, 0.9);
+    }
+  }
+}

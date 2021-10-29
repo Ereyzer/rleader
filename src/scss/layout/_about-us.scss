@@ -1,0 +1,109 @@
+.about-us {
+  margin-bottom: 50px;
+  @media screen and (min-width: $desktop-min-width) {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    @media screen and (min-width: $desktop-min-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__image-block {
+    picture {
+      display: block;
+      -width: 300px;
+    }
+
+    @media screen and (min-width: $desktop-min-width) {
+      background: #c4c4c4;
+      picture {
+        width: 581px;
+      }
+    }
+  }
+  &__image {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    display: block;
+    background: #c4c4c4;
+  }
+  &__info {
+    padding-top: 20px;
+    @media screen and (min-width: $desktop-min-width) {
+      margin-left: 30px;
+    }
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 30px;
+      height: 3px;
+      background-color: $about-us-accent-color;
+    }
+  }
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+
+    color: $title-text-color;
+
+    margin-bottom: 50px;
+  }
+  &__paragraph {
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    /* or 187% */
+
+    color: $blue-text-color;
+
+    margin-bottom: 50px;
+  }
+  &__superiority-list {
+    li + li {
+      margin-bottom: 35px;
+      @media screen and (min-width: $desktop-min-width) {
+        margin-left: 55px;
+      }
+    }
+
+    @media screen and (min-width: $desktop-min-width) {
+      display: flex;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__superiority-number {
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 87px;
+
+    color: $about-us-accent-color;
+
+    margin-bottom: 10px;
+  }
+  &__superiority-text {
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #3f3f3f;
+  }
+}

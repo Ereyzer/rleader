@@ -1,0 +1,131 @@
+.contact-us {
+  position: absolute;
+  //   //   right: -223px;
+  // top: -76px;
+  // right: 90px;
+  height: 380px;
+  width: 209px;
+
+  @media screen and (min-width: $desktop-min-width) {
+    // Desktop
+    height: 549px;
+    width: 351px;
+    top: -5px;
+    right: 220px;
+  }
+
+  //   padding: 0;
+  border: 3px solid $primary-text-color;
+  overflow: hidden;
+
+  &__backdrop {
+    position: absolute;
+    width: 920px;
+    height: 816px;
+    transform: rotate(-90deg);
+
+    // right: -870px;
+    // left: -45px;
+
+    @media screen and (max-width: $desktop-min-width -1) {
+      // background-color: rgba(58, 70, 97, 0.7);
+    }
+
+    // background: rgba(58, 70, 97);
+
+    // height: 100vh;
+    // overflow: hidden;
+  }
+
+  &__form {
+    transform: rotate(90deg);
+    margin-top: 75px;
+
+    @media screen and (min-width: $desktop-min-width) {
+      margin-top: 175px;
+    }
+    input {
+      box-sizing: border-box;
+      width: 250px;
+      height: 25px;
+      margin-bottom: 5px;
+
+      font-family: $open-sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      /* identical to box height */
+
+      background-color: inherit;
+      border: 1px solid $primary-text-color;
+
+      color: $primary-text-color;
+
+      padding-left: 5px;
+      &::placeholder {
+        color: $primary-text-color;
+      }
+      @media screen and (min-width: $desktop-min-width) {
+        width: 290px;
+        height: 45px;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    button {
+      width: 250px;
+      height: 25px;
+
+      background: $yellow-color;
+      @media screen and (min-width: $desktop-min-width) {
+        width: 290px;
+        height: 45px;
+      }
+    }
+  }
+  &__text {
+    padding: 0;
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 23px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    // background-color: rgba($color: #ffffff, $alpha: 0.4);
+
+    color: $primary-text-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    width: 100%;
+    background-color: rgba($color: #ffffff, $alpha: 0.4);
+    border: unset;
+
+    box-shadow: 100px 5075px 0 5000px rgba(58, 70, 97, 0.9);
+
+    @media screen and (min-width: $desktop-min-width) {
+      font-size: 24px;
+      line-height: 33px;
+      height: 80px;
+
+      box-shadow: unset;
+    }
+  }
+}
+
+.open-menu {
+  position: fixed;
+  // top: 50%;
+  // left: -100%;
+  left: -314px;
+}
