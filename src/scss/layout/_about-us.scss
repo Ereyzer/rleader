@@ -11,23 +11,21 @@
     }
   }
   &__image-block {
-    picture {
-      display: block;
-      -width: 300px;
-    }
+    display: block;
+
+    // width: 100%;
+    // display: block;
+  }
+  &__image {
+    width: 300px;
+    // background: #c4c4c4;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     @media screen and (min-width: $desktop-min-width) {
       background: #c4c4c4;
-      picture {
-        width: 581px;
-      }
+
+      width: 581px;
     }
-  }
-  &__image {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    display: block;
-    background: #c4c4c4;
   }
   &__info {
     padding-top: 20px;
@@ -37,7 +35,7 @@
 
     position: relative;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       width: 30px;
@@ -46,7 +44,7 @@
     }
   }
   &__title {
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
